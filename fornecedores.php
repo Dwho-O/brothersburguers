@@ -18,25 +18,17 @@
 			<div class="row">
 				<div class="col-md-12">
 					 <div class="table-responsive">
-                     <div style="text-align: center; font-size: 20px;">
+                     <div style="text-align: center; font-size: 20px; margin-top:100px; margin-bottom: 200px">
                         <?php 
                             $link = "./xml/fornecedores.xml"; 
                             $xml = simplexml_load_file($link) -> fornecedores;
 
-                            foreach($xml -> fornecedor1 as $fornecedor1){ 
-                                echo "<strong>Nome:</strong> ".utf8_decode($fornecedor1 -> nome)."<br />"; 
-                                echo "<strong>Telefone:</strong> ".utf8_decode($fornecedor1 -> telefone1)."<br />";
-                                echo "<strong>Telefone:</strong> ".utf8_decode($fornecedor1 -> telefone2)."<br />";
-                                echo "<strong>E-mail:</strong> ".utf8_decode($fornecedor1 -> email1)."<br />";
-                                echo "<strong>E-mail:</strong> ".utf8_decode($fornecedor1 -> email2)."<br />";
-                                echo "<br />"; 
-                            } 
-                                foreach($xml -> fornecedor2 as $fornecedor2){ 
-                                echo "<strong>Nome:</strong> ".utf8_decode($fornecedor2 -> nome)."<br />"; 
-                                echo "<strong>Telefone:</strong> ".utf8_decode($fornecedor2 -> telefone1)."<br />";
-                                echo "<strong>Telefone:</strong> ".utf8_decode($fornecedor2 -> telefone2)."<br />";
-                                echo "<strong>E-mail:</strong> ".utf8_decode($fornecedor2 -> email1)."<br />";
-                                echo "<strong>E-mail:</strong> ".utf8_decode($fornecedor2 -> email2)."<br />";
+                            foreach($xml -> fornecedor as $fornecedor){ 
+                                echo "<strong>Nome:</strong> ".utf8_decode($fornecedor -> nome)."<br />"; 
+                                echo "<strong>Telefone:</strong> ".utf8_decode($fornecedor -> telefone1)."<br />";
+                                echo "<strong>Telefone:</strong> ".utf8_decode($fornecedor -> telefone2)."<br />";
+                                echo "<strong>E-mail:</strong> ".utf8_decode($fornecedor -> email1)."<br />";
+                                echo "<strong>E-mail:</strong> ".utf8_decode($fornecedor -> email2)."<br />";
                                 echo "<br />"; 
                             } 
                         ?>
